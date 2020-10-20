@@ -39,7 +39,7 @@ const expressFormData = require('express-form-data');
 const mongoose = require('mongoose');
 const ProductRoutes = require('./routes/ProductRoutes');
 const UserRoutes = require("./routes/UserRoutes");
-
+const PostRoutes = require('./routes/PostRoutes')
 
 //const dbURL = "mongodb+srv://emad:emad@cluster0.hqtag.mongodb.net/users?retryWrites=true&w=majority";
 const dbURL = process.env.DB_URL;
@@ -109,7 +109,7 @@ server.use(
 )
 server.use("/users", UserRoutes);
 
-server.use("/posts", require("./routes/PostRoutes"))
+server.use("/posts", PostRoutes)
 
 
 server.get(

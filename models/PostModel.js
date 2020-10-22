@@ -17,6 +17,12 @@ const PostSchema = new mongoose.Schema(
         body: {
             type: String,
             required: true
+        },
+        userName:{
+            type:String
+        },
+        userAvatar:{
+            type:String
         }
     }
 )

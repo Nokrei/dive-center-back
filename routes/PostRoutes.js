@@ -18,6 +18,8 @@ router.post("/newpost", (req, res) => {
   const formData = {
     title: req.body.title,
     body: req.body.body,
+    userName: req.body.userName,
+    userAvatar: req.body.userAvatar
   };
   // instantiating an instance of ProductModel
   const newPost = new PostModel(formData);
